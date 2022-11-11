@@ -1,0 +1,31 @@
+{
+  "name": "nettruyen-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/api.js",
+  "scripts": {
+    "start": "node ./src/api.js",
+    "dev": "nodemon --inspect ./src/api.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vochithanh89/nettruyen-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vochithanh89/nettruyen-api/issues"
+  },
+  "homepage": "https://github.com/vochithanh89/nettruyen-api#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cheerio": "^1.0.0-rc.11",
+    "express": "^4.18.1",
+    "puppeteer": "^19.2.2",
+    "require": "^2.4.20"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
