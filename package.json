@@ -23,6 +23,8 @@
     "cheerio": "^1.0.0-rc.11",
     "express": "^4.18.1",
     "puppeteer": "^19.2.2",
+    "puppeteer-extra": "^3.3.4",
+    "puppeteer-extra-plugin-stealth": "^2.11.1",
     "require": "^2.4.20"
   },
   "devDependencies": {
