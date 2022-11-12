@@ -1,14 +1,21 @@
 const express = require('express');
 const cheerio = require('cheerio');
 const axios = require('axios');
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer-extra');
 const app = express();
 const port = process.env.PORT || 8080;
+
+const StealthPlugin = require('puppeteer-extra-plugin-stealth');
+puppeteer.use(StealthPlugin());
 
 const baseUrl = 'https://nhattruyenin.com';
 
 const getHtmlData = async (path) => {
-  const browser = await puppeteer.launch({ headless: false, args: ['--no-sandbox'] });
+  const browser = await puppeteer.launch({
+    headless: true,
+    executablePath: './chromium/chrome-win/chrome.exe',
+    waitUntil: 'domcontentloaded',
+  });
   const page = await browser.newPage();
   await page.goto(baseUrl + path);
 
